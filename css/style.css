@@ -1,0 +1,336 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'HelveticaNeueLTStd Roman';
+  src: url("fonts/HelveticaNeueLTStd Roman.otf") format("otf"), url("fonts/HelveticaNeueLTStd Roman.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'DINPro-Light';
+  src: url("fonts/DINPro-Light.ttf") format("ttf"), url("fonts/DINPro-Light.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'HiraKakuStd W3';
+  src: url("fonts/HiraKakuStd W3.otf") format("otf"), url("fonts/HiraKakuStd W3.otf") format("otf");
+  font-weight: 300;
+  font-style: normal; }
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, p, blockquote, q, tr, th, td, caption, address, span, img, iframe, em, strong, small, article, aside, figcaption, figure, footer, header, main, nav, section, time {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box; }
+
+html {
+  overflow-y: scroll;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 10px; }
+
+body {
+  color: #000;
+  font-size: 100%;
+  line-height: 1.4;
+  font-family: "Hiragino Kaku Gothic W3 JIS2004", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS PGothic", "MS Gothic", "ＭＳ Ｐゴシック", "ＭＳ ゴシック", "メイリオ", "Meiryo", sans-serif; }
+
+.container {
+  display: block;
+  margin: 0 auto;
+  max-width: 990px;
+  padding: 0 15px; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input, textarea {
+  margin: 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+input, textarea, select {
+  *font-size: 100%; }
+
+a {
+  text-decoration: none; }
+
+@media screen and (max-width: 640px) {
+  .pc {
+    display: none !important; } }
+@media screen and (min-width: 641px) {
+  .sp {
+    display: none !important; } }
+/* header */
+#header-container {
+  border-top: 10px solid #00285c; }
+  #header-container #btn-menu-mobile {
+    display: none; }
+    @media screen and (max-width: 768px) {
+      #header-container #btn-menu-mobile {
+        display: block; } }
+  #header-container .container {
+    margin: 0;
+    padding-left: 30px; }
+    #header-container .container .logo {
+      display: inline-block;
+      padding: 22px 0 0;
+      float: left; }
+    #header-container .container ul.main-menu {
+      display: inline-block;
+      padding: 22px 0 22px;
+      float: right; }
+      #header-container .container ul.main-menu li {
+        text-align: center;
+        padding: 0 22px;
+        display: inline-block; }
+        #header-container .container ul.main-menu li a {
+          font-family: 'HelveticaNeueLTStd Roman';
+          text-transform: uppercase;
+          color: #00285c;
+          font-size: 16px;
+          text-align: center; }
+          #header-container .container ul.main-menu li a small {
+            margin: 2px 0 0;
+            color: #00285c;
+            font-family: 'HiraKakuStd W3';
+            font-size: 10px;
+            display: block; }
+  #header-container .shipping-date {
+    position: absolute;
+    right: 30px;
+    top: 32px; }
+    #header-container .shipping-date span {
+      color: #00285c; }
+      #header-container .shipping-date span.shiped {
+        font-family: 'HiraKakuStd W3';
+        font-size: 14px;
+        position: relative;
+        padding: 0 0 0 30px; }
+        #header-container .shipping-date span.shiped::before {
+          position: absolute;
+          content: "|";
+          top: -3px;
+          left: 1px;
+          color: #B2BECE; }
+      #header-container .shipping-date span.month {
+        font-family: 'DINPro-Light';
+        font-size: 22px;
+        border: 1px solid #00285c;
+        border-radius: 4px;
+        padding: 0 3px;
+        line-height: 34px;
+        display: inline-block;
+        position: relative;
+        margin: 0 30px 0 10px; }
+        #header-container .shipping-date span.month::after {
+          position: absolute;
+          content: "/";
+          right: -20px;
+          font-size: 16px; }
+      #header-container .shipping-date span.day {
+        font-family: 'DINPro-Light';
+        font-size: 22px;
+        border: 1px solid #00285c;
+        border-radius: 4px;
+        padding: 0 3px;
+        line-height: 34px;
+        display: inline-block; }
+
+#banner {
+  display: inline-block;
+  position: relative;
+  width: 100%; }
+  #banner .banner-slide ul li {
+    height: 548px;
+    text-align: center; }
+    #banner .banner-slide ul li a {
+      text-align: center;
+      position: relative;
+      height: 548px;
+      display: inline-block;
+      width: 100%;
+      max-width: 1280px; }
+      #banner .banner-slide ul li a .banner-info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+        #banner .banner-slide ul li a .banner-info h2 {
+          font-family: 'HiraKakuStd W1';
+          color: #fff;
+          font-size: 48px;
+          line-height: 70px;
+          font-weight: 400;
+          margin: 0 0 20px; }
+        #banner .banner-slide ul li a .banner-info .btn-play {
+          display: inline-block; }
+      #banner .banner-slide ul li a .new-release {
+        position: absolute;
+        left: 40px;
+        bottom: 40px; }
+        #banner .banner-slide ul li a .new-release .img {
+          padding: 10px 53px;
+          background: #E7F0F7;
+          float: left;
+          display: inline-block; }
+        #banner .banner-slide ul li a .new-release .info {
+          padding: 15px 25px;
+          background: #fff;
+          display: inline-block;
+          text-align: left; }
+          #banner .banner-slide ul li a .new-release .info::after {
+            position: absolute;
+            content: "";
+            background: url(../images/df-icon-release-next.png) no-repeat center;
+            right: 10px;
+            width: 9px;
+            height: 16px;
+            top: 50%;
+            transform: translateY(-50%); }
+          #banner .banner-slide ul li a .new-release .info h3 {
+            font-family: 'HelveticaNeueLTStd Md';
+            font-size: 12px;
+            color: #003b87;
+            text-transform: uppercase; }
+          #banner .banner-slide ul li a .new-release .info .content {
+            font-family: 'HiraKakuStd W3';
+            color: #010101;
+            font-size: 14px; }
+  #banner .banner-slide ul.slick-dots {
+    display: inline-block;
+    height: 20px;
+    bottom: 35px; }
+    #banner .banner-slide ul.slick-dots li {
+      height: auto; }
+      #banner .banner-slide ul.slick-dots li.slick-active button::before {
+        color: #fff; }
+      #banner .banner-slide ul.slick-dots li button::before {
+        color: #8F95A4;
+        font-size: 13px; }
+  #banner .down {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 13px;
+    transform: translateX(-50%); }
+
+.section {
+  margin: 40px 0 0; }
+  .section .title {
+    text-align: center; }
+    .section .title h2 {
+      font-size: 38px;
+      color: #00285c;
+      font-weight: normal;
+      font-family: 'HiraKakuStd W1'; }
+  .section .btn-block {
+    display: inline-block;
+    width: 100%;
+    font-family: 'HelveticaNeueLTStd Roman';
+    background: #EEEEEE;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000;
+    margin: 70px 0 0;
+    text-align: center;
+    padding: 20px 0; }
+    .section .btn-block img {
+      vertical-align: middle;
+      padding: 0 15px 0 0; }
+
+.phone ul {
+  margin: 70px -15px 0; }
+  .phone ul li {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding: 0 15px; }
+    .phone ul li .phone-item {
+      display: inline-block;
+      border: 1px solid #EBEBEB; }
+      .phone ul li .phone-item .content {
+        margin: 40px 0 0;
+        padding: 0 17px; }
+        .phone ul li .phone-item .content p {
+          font-size: 24px;
+          color: #07295c;
+          font-family: 'HiraKakuStd W3'; }
+        .phone ul li .phone-item .content span {
+          font-size: 14px;
+          color: #000;
+          display: block;
+          margin: 15px 0 5px;
+          font-family: 'HiraKakuStd W3';
+          min-height: 70px; }
+        .phone ul li .phone-item .content a {
+          background: #fff;
+          position: relative;
+          top: 18px;
+          display: inline-block;
+          border: 2px solid #07295C;
+          border-radius: 20px;
+          line-height: 39px;
+          padding: 0 25px;
+          font-family: 'HiraKakuStd W3';
+          font-size: 16px;
+          color: #07295c; }
+          .phone ul li .phone-item .content a img {
+            vertical-align: middle;
+            margin: -2px 15px 0 0; }
+
+.product {
+  border-top: 1px solid #E6E6E6;
+  margin: 80px 0 0;
+  padding: 70px 0 0; }
+  .product .title a {
+    background: #fff;
+    margin: 20px 0 80px;
+    display: inline-block;
+    border: 2px solid #07295C;
+    border-radius: 20px;
+    line-height: 39px;
+    padding: 0 25px;
+    font-family: 'HiraKakuStd W3';
+    font-size: 16px;
+    color: #07295c; }
+  .product ul {
+    margin: 0 -15px; }
+    .product ul li {
+      margin: 0 0 30px;
+      padding: 0 15px;
+      float: left;
+      width: 25%; }
+      .product ul li .product-item {
+        border: 1px solid #DDDDDD; }
+        .product ul li .product-item .content {
+          text-align: center; }
+          .product ul li .product-item .content .name {
+            font-size: 24px;
+            color: #003b87;
+            font-family: 'HelveticaNeueLTStd Lt';
+            margin: 20px 0 10px; }
+            .product ul li .product-item .content .name small {
+              font-size: 12px;
+              color: #003b87;
+              display: block; }
+          .product ul li .product-item .content .pricing {
+            font-size: 16px;
+            color: #000;
+            font-family: 'HiraKakuStd W3';
+            margin: 0 0 30px; }
+            .product ul li .product-item .content .pricing small {
+              font-size: 10px;
+              display: block; }
+
+/*# sourceMappingURL=style.css.map */
