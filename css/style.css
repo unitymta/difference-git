@@ -66,10 +66,23 @@ a {
   width: 100%;
   border-top: 10px solid #00285c; }
   #header-container #btn-menu-mobile {
-    display: none; }
-    @media screen and (max-width: 768px) {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    top: 32px;
+    left: 30px;
+    width: 40px;
+    height: auto;
+    line-height: 60px; }
+    @media screen and (max-width: 767px) {
       #header-container #btn-menu-mobile {
         display: block; } }
+    #header-container #btn-menu-mobile span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: #00285c;
+      margin-bottom: 10px; }
   #header-container .container {
     margin: 0;
     padding: 0 280px 0 30px;
@@ -77,6 +90,16 @@ a {
     @media (min-width: 768px) and (max-width: 991px) {
       #header-container .container {
         padding: 0 250px 0 30px; } }
+    @media (max-width: 767px) {
+      #header-container .container {
+        padding: 0px;
+        text-align: center; } }
+    #header-container .container.active {
+      background: #00285c; }
+      #header-container .container.active .logo img {
+        display: none; }
+      #header-container .container.active .logo img.logo-mobile {
+        display: block; }
     #header-container .container .logo {
       display: inline-block;
       padding: 22px 0 0;
@@ -84,13 +107,26 @@ a {
       @media (min-width: 768px) and (max-width: 991px) {
         #header-container .container .logo {
           padding: 30px 0 0; } }
+      @media (max-width: 767px) {
+        #header-container .container .logo {
+          float: none;
+          padding-bottom: 20px; } }
       @media (min-width: 768px) and (max-width: 991px) {
         #header-container .container .logo a img {
           width: 130px; } }
+      #header-container .container .logo a img.logo-mobile {
+        display: none; }
     #header-container .container ul.main-menu {
       display: inline-block;
       padding: 22px 20px 22px 0px;
       float: right; }
+      @media (max-width: 767px) {
+        #header-container .container ul.main-menu {
+          padding-right: 0;
+          float: none;
+          display: none;
+          width: 100%;
+          background: #fff; } }
       #header-container .container ul.main-menu li {
         text-align: center;
         padding: 0 22px;
@@ -101,6 +137,10 @@ a {
         @media (min-width: 768px) and (max-width: 991px) {
           #header-container .container ul.main-menu li {
             padding: 0 5px; } }
+        @media (max-width: 767px) {
+          #header-container .container ul.main-menu li {
+            padding: 10px 0;
+            border-bottom: 3px solid #ccc; } }
         #header-container .container ul.main-menu li a {
           font-family: 'HelveticaNeueLTStd Roman';
           text-transform: uppercase;
@@ -126,6 +166,12 @@ a {
     position: absolute;
     right: 30px;
     top: 32px; }
+    @media (max-width: 767px) {
+      #header-container .shipping-date {
+        position: static;
+        background: #E9EDF2;
+        text-align: center;
+        padding: 20px 0; } }
     #header-container .shipping-date span {
       color: #00285c; }
       #header-container .shipping-date span.shiped {
@@ -133,12 +179,18 @@ a {
         font-size: 14px;
         position: relative;
         padding: 0 0 0 30px; }
+        @media (max-width: 767px) {
+          #header-container .shipping-date span.shiped {
+            padding: 0; } }
         #header-container .shipping-date span.shiped::before {
           position: absolute;
           content: "|";
           top: -3px;
           left: 1px;
           color: #B2BECE; }
+          @media (max-width: 767px) {
+            #header-container .shipping-date span.shiped::before {
+              display: none; } }
         @media (min-width: 768px) and (max-width: 991px) {
           #header-container .shipping-date span.shiped {
             font-size: 10px; } }
@@ -152,6 +204,11 @@ a {
         display: inline-block;
         position: relative;
         margin: 0 30px 0 10px; }
+        @media (max-width: 767px) {
+          #header-container .shipping-date span.month {
+            font-size: 24px;
+            background: #fff;
+            border: 0; } }
         #header-container .shipping-date span.month::after {
           position: absolute;
           content: "/";
@@ -173,11 +230,19 @@ a {
           #header-container .shipping-date span.day {
             font-size: 15px;
             line-height: 26px; } }
+        @media (max-width: 767px) {
+          #header-container .shipping-date span.day {
+            font-size: 24px;
+            background: #fff;
+            border: 0; } }
 
 #banner {
   display: inline-block;
   position: relative;
   width: 100%; }
+  @media (max-width: 767px) {
+    #banner .banner-slide .slick-list {
+      padding-bottom: 120px; } }
   #banner .banner-slide ul li {
     height: 548px;
     text-align: center; }
@@ -204,11 +269,18 @@ a {
             #banner .banner-slide ul li a .banner-info h2 {
               font-size: 30px;
               line-height: 50px; } }
+          @media (max-width: 767px) {
+            #banner .banner-slide ul li a .banner-info h2 {
+              font-size: 32px;
+              line-height: 50px; } }
         #banner .banner-slide ul li a .banner-info .btn-play {
           display: inline-block; }
           @media (min-width: 768px) and (max-width: 991px) {
             #banner .banner-slide ul li a .banner-info .btn-play img {
               width: 100px; } }
+          @media (max-width: 767px) {
+            #banner .banner-slide ul li a .banner-info .btn-play img {
+              width: 120px; } }
       #banner .banner-slide ul li a .new-release {
         position: absolute;
         left: 40px;
@@ -216,6 +288,13 @@ a {
         @media (min-width: 768px) and (max-width: 991px) {
           #banner .banner-slide ul li a .new-release {
             left: 20px; } }
+        @media (max-width: 767px) {
+          #banner .banner-slide ul li a .new-release {
+            bottom: auto;
+            top: 100%;
+            left: 0 !important;
+            right: 0;
+            border-bottom: 1px solid #EFEFEF; } }
         #banner .banner-slide ul li a .new-release .img {
           padding: 10px 53px;
           background: #E7F0F7;
@@ -225,6 +304,16 @@ a {
             #banner .banner-slide ul li a .new-release .img {
               height: 75px;
               padding: 10px 10px; } }
+          @media (max-width: 767px) {
+            #banner .banner-slide ul li a .new-release .img {
+              width: 50%;
+              height: 120px;
+              display: flex;
+              justify-content: center;
+              align-items: center; } }
+          @media (max-width: 767px) {
+            #banner .banner-slide ul li a .new-release .img img {
+              margin: 0 auto; } }
         #banner .banner-slide ul li a .new-release .info {
           padding: 15px 25px;
           background: #fff;
@@ -234,6 +323,10 @@ a {
             #banner .banner-slide ul li a .new-release .info {
               height: 75px;
               padding: 10px 30px 10px 10px; } }
+          @media (max-width: 767px) {
+            #banner .banner-slide ul li a .new-release .info {
+              width: 50%;
+              padding: 20px 20px 0 30px; } }
           #banner .banner-slide ul li a .new-release .info::after {
             position: absolute;
             content: "";
@@ -248,6 +341,9 @@ a {
             font-size: 12px;
             color: #003b87;
             text-transform: uppercase; }
+            @media (max-width: 767px) {
+              #banner .banner-slide ul li a .new-release .info h3 {
+                font-size: 18px; } }
           #banner .banner-slide ul li a .new-release .info .content {
             font-family: 'HiraKakuStd W3';
             color: #010101;
@@ -255,10 +351,16 @@ a {
             @media (max-width: 1199px) {
               #banner .banner-slide ul li a .new-release .info .content {
                 font-size: 10px; } }
+            @media (max-width: 767px) {
+              #banner .banner-slide ul li a .new-release .info .content {
+                font-size: 20px; } }
   #banner .banner-slide ul.slick-dots {
     display: inline-block;
     height: 20px;
     bottom: 35px; }
+    @media (max-width: 767px) {
+      #banner .banner-slide ul.slick-dots {
+        bottom: 150px; } }
     #banner .banner-slide ul.slick-dots li {
       height: auto; }
       #banner .banner-slide ul.slick-dots li.slick-active button::before {
@@ -272,6 +374,9 @@ a {
     left: 50%;
     bottom: 13px;
     transform: translateX(-50%); }
+    @media (max-width: 767px) {
+      #banner .down {
+        display: none; } }
 
 .section {
   margin: 40px 0 0; }
@@ -282,6 +387,9 @@ a {
       color: #00285c;
       font-weight: normal;
       font-family: 'HiraKakuStd W1'; }
+    @media (max-width: 767px) {
+      .section .title {
+        font-size: 32px; } }
     .section .title a {
       background: #fff;
       margin: 20px 0 80px;
@@ -317,15 +425,32 @@ a {
     width: 33.33%;
     text-align: center;
     padding: 0 15px; }
+    @media (max-width: 767px) {
+      .phone ul li {
+        width: 100%;
+        margin: 0 0 30px; } }
     .phone ul li .phone-item {
       display: inline-block;
       border: 1px solid #EBEBEB; }
+      @media (max-width: 767px) {
+        .phone ul li .phone-item {
+          width: 100%; } }
+      @media (max-width: 767px) {
+        .phone ul li .phone-item .img {
+          float: left;
+          width: 40%; } }
       .phone ul li .phone-item .img img {
         max-width: 100%;
         width: 100%; }
       .phone ul li .phone-item .content {
         margin: 40px 0 0;
         padding: 0 17px; }
+        @media (max-width: 767px) {
+          .phone ul li .phone-item .content {
+            width: 60%;
+            text-align: left;
+            float: right;
+            padding-left: 30px; } }
         .phone ul li .phone-item .content p {
           font-size: 24px;
           color: #07295c;
@@ -342,7 +467,11 @@ a {
           min-height: 70px; }
           @media (min-width: 768px) and (max-width: 991px) {
             .phone ul li .phone-item .content span {
-              font-size: 10px; } }
+              font-size: 10px;
+              min-height: 50px; } }
+          @media (max-width: 767px) {
+            .phone ul li .phone-item .content span {
+              min-height: auto; } }
         .phone ul li .phone-item .content a {
           background: #fff;
           position: relative;
@@ -377,6 +506,9 @@ a {
       width: 25%; }
       .product ul li .product-item, .office ul li .product-item, .new-topic ul li .product-item {
         border: 1px solid #DDDDDD; }
+        .product ul li .product-item .img img, .office ul li .product-item .img img, .new-topic ul li .product-item .img img {
+          width: 100%;
+          max-width: 100%; }
         .product ul li .product-item .content, .office ul li .product-item .content, .new-topic ul li .product-item .content {
           text-align: center; }
           .product ul li .product-item .content .name, .office ul li .product-item .content .name, .new-topic ul li .product-item .content .name {
@@ -424,6 +556,9 @@ a {
         color: #003b87;
         font-family: 'HelveticaNeueLTStd Lt';
         margin: 8px 0; }
+        @media (min-width: 768px) and (max-width: 991px) {
+          .product .gift-ticket .content .down, .office .gift-ticket .content .down, .new-topic .gift-ticket .content .down {
+            font-size: 24px; } }
       .product .gift-ticket .content span, .office .gift-ticket .content span, .new-topic .gift-ticket .content span {
         display: block;
         text-align: center;
@@ -451,6 +586,9 @@ a {
       width: 25%;
       padding: 0 15px;
       margin: 0 0 30px; }
+      .styling ul li a img {
+        width: 100%;
+        max-width: 100%; }
   .styling a.btn-block {
     margin: 50px 0 0; }
 
@@ -459,6 +597,13 @@ a {
   .office .gift-ticket .img {
     padding: 0;
     background: #fff; }
+    .office .gift-ticket .img img {
+      max-width: 100%;
+      width: 100%; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .office .gift-ticket .content {
+      height: 135px;
+      padding: 21px 0; } }
 
 .new-topic .title h2 {
   font-size: 38px;
@@ -482,9 +627,16 @@ a {
     display: inline-block;
     margin: 0 0 15px;
     text-align: left; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .new-topic ul li .content span {
+        font-size: 10px;
+        min-height: 42px; } }
   .new-topic ul li .content .topic-group {
     font-size: 14px;
     text-transform: uppercase; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .new-topic ul li .content .topic-group {
+        font-size: 10px; } }
 .new-topic .btn-block {
   margin: 50px 0 0; }
 
@@ -508,10 +660,16 @@ a {
   .information .info-right {
     width: 75%;
     float: right; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .information .info-right {
+        padding: 0 0 0 30px; } }
     .information .info-right li {
       background: url(../images/df-icon-release-next.png) no-repeat right center;
       font-family: 'HiraKakuStd W3';
       margin: 0 0 10px; }
+      @media (min-width: 768px) and (max-width: 991px) {
+        .information .info-right li {
+          font-size: 10px; } }
       .information .info-right li .date {
         color: #999;
         margin: 0 24px 0 0; }
@@ -526,11 +684,18 @@ a {
   background: #fff;
   z-index: 9999;
   padding: 18px 30px; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    #note {
+      font-size: 10px;
+      padding: 18px 10px; } }
   #note .left {
     float: left; }
     #note .left div {
       display: inline-block;
       margin: 0 20px 0 0; }
+      @media (min-width: 768px) and (max-width: 991px) {
+        #note .left div {
+          margin: 0 10px 0 0; } }
       #note .left div:last-child a {
         border-radius: 5px; }
       #note .left div a {
@@ -539,6 +704,9 @@ a {
         padding: 0 22px;
         border: 1px solid #00285c;
         border-radius: 0 5px 5px 0; }
+        @media (min-width: 768px) and (max-width: 991px) {
+          #note .left div a {
+            padding: 0 15px; } }
         #note .left div a.active {
           background: #00285c;
           border-radius: 5px 0 0 5px;
@@ -553,6 +721,9 @@ a {
     display: flex; }
     #note .right a {
       margin: 0 0 0 20px; }
+      @media (min-width: 768px) and (max-width: 991px) {
+        #note .right a {
+          margin: 0 0 0 10px; } }
 
 #footer {
   background: #031228;

@@ -90,8 +90,22 @@ $color-blue : #00285c;
 	border-top: 10px solid $color-blue;
 	#btn-menu-mobile {
 	  	display: none;
-	  	@media screen and (max-width: 768px) {
+	  	position: absolute;
+		z-index: 99999;
+		top: 32px;
+		left: 30px;
+		width: 40px;
+		height: auto;
+		line-height: 60px;
+	  	@media screen and (max-width: 767px) {
 		    display: block;
+		}
+		span{
+			display: block;
+			height: 2px;
+			width: 100%;
+			background-color: #00285c;
+			margin-bottom: 10px;
 		}
 	}
 
@@ -104,18 +118,43 @@ $color-blue : #00285c;
 			padding: 0 250px 0 30px;
 		}
 
+		@media (max-width: 767px){
+			padding: 0px;
+			text-align: center;
+		}
+
+		&.active{
+			background: $color-blue;
+			.logo{
+				img{
+					display: none;
+				}
+				img.logo-mobile{
+					display: block;
+				}
+			}
+		}
 		.logo{
 			display: inline-block;
 			padding: 22px 0 0;
 			float: left;
+
 			@media (min-width: 768px) and (max-width: 991px){
 				padding: 30px 0 0;
 			}
+			@media (max-width: 767px){
+				float: none;
+				padding-bottom: 20px;
+			}
+
 			a{
 				img{
 					@media (min-width: 768px) and (max-width: 991px){
 						width: 130px;
 					}
+				}
+				img.logo-mobile{
+					display: none;
 				}
 			}
 		}
@@ -123,6 +162,15 @@ $color-blue : #00285c;
 			display: inline-block;
 			padding: 22px 20px 22px 0px;
 			float: right;
+
+			@media (max-width: 767px){
+				padding-right: 0;
+				float: none;
+				display: none;
+				width: 100%;
+				background: #fff;
+			}
+
 			li{
 				text-align: center;
 				padding: 0 22px;
@@ -133,6 +181,10 @@ $color-blue : #00285c;
 				}
 				@media (min-width: 768px) and (max-width: 991px) {
 					padding: 0 5px;
+				}
+				@media (max-width: 767px){
+					padding: 10px 0;
+					border-bottom: 3px solid #ccc;
 				}
 
 				a{
@@ -168,6 +220,14 @@ $color-blue : #00285c;
 		position: absolute;
 		right: 30px;
 		top: 32px;
+
+		@media (max-width: 767px){
+			position: static;
+			background: #E9EDF2;
+			text-align: center;
+			padding: 20px 0;
+		}
+
 		span{
 			color: $color-blue;
 			&.shiped{
@@ -175,12 +235,21 @@ $color-blue : #00285c;
 				font-size: 14px;
 				position: relative;
 				padding: 0 0 0 30px;
+
+				@media (max-width: 767px){
+					padding:0;
+				}
+
 				&::before{
 					position: absolute;
 					content: "|";
 					top: -3px;
 					left: 1px;
 					color: #B2BECE;
+
+					@media (max-width: 767px){
+						display: none;
+					}
 				}
 
 				@media (min-width: 768px) and (max-width: 991px) {
@@ -198,6 +267,13 @@ $color-blue : #00285c;
 				display: inline-block;
 				position: relative;
 				margin: 0 30px 0 10px;
+
+				@media (max-width: 767px){
+					font-size: 24px;
+					background: #fff;
+					border: 0;
+				}
+
 				&::after{
 					position: absolute;
 					content: "/";
@@ -224,6 +300,11 @@ $color-blue : #00285c;
 					font-size: 15px;
 					line-height: 26px;
 				}
+				@media (max-width: 767px){
+					font-size: 24px;
+					background: #fff;
+					border: 0;
+				}
 			}
 		}
 	}
@@ -235,6 +316,11 @@ $color-blue : #00285c;
 	position: relative;
 	width: 100%;
 	.banner-slide{
+		.slick-list{
+			@media (max-width: 767px){
+				padding-bottom: 120px;
+			}
+		}
 		ul{
 			li{
 				height: 548px;
@@ -263,6 +349,10 @@ $color-blue : #00285c;
 								font-size: 30px;
 								line-height: 50px;
 							}
+							@media (max-width: 767px){
+								font-size: 32px;
+								line-height: 50px;
+							}
 
 						}
 						.btn-play{
@@ -270,6 +360,9 @@ $color-blue : #00285c;
 							img{
 								@media (min-width: 768px) and (max-width: 991px){
 									width: 100px;
+								}
+								@media (max-width: 767px){
+									width: 120px;
 								}
 							}
 						}
@@ -282,6 +375,13 @@ $color-blue : #00285c;
 						@media (min-width: 768px) and (max-width: 991px){
 							left: 20px;
 						}
+						@media (max-width: 767px){
+							bottom: auto;
+							top: 100%;
+							left: 0 !important;
+							right: 0;
+							border-bottom: 1px solid #EFEFEF;
+						}
 
 						.img{
 							padding: 10px 53px;
@@ -292,6 +392,19 @@ $color-blue : #00285c;
 							@media (max-width: 1199px){
 								height: 75px;
 								padding: 10px 10px;
+							}
+							@media (max-width: 767px){
+								width: 50%;
+								height: 120px;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+							}
+
+							img{
+								@media (max-width: 767px){
+									margin: 0 auto;
+								}
 							}
 						}
 						.info{
@@ -304,6 +417,11 @@ $color-blue : #00285c;
 								height: 75px;
 								padding: 10px 30px 10px 10px;
 							}
+							@media (max-width: 767px){
+								width: 50%;
+								padding: 20px 20px 0 30px;
+							}
+
 							&::after{
 								position: absolute;
 								content:"";
@@ -319,6 +437,10 @@ $color-blue : #00285c;
 								font-size: 12px;
 								color: #003b87;
 								text-transform: uppercase;
+
+								@media (max-width: 767px){
+									font-size: 18px;
+								}
 							}
 							.content{
 								font-family: 'HiraKakuStd W3';
@@ -327,6 +449,9 @@ $color-blue : #00285c;
 
 								@media (max-width: 1199px){
 									font-size: 10px;
+								}
+								@media (max-width: 767px){
+									font-size: 20px;
 								}
 							}
 						}
@@ -338,6 +463,10 @@ $color-blue : #00285c;
 			display: inline-block;
 			height: 20px;
 			bottom: 35px;
+
+			@media (max-width: 767px){
+				bottom: 150px;
+			}
 			li{
 				height: auto;
 				&.slick-active{
@@ -362,6 +491,10 @@ $color-blue : #00285c;
 		left: 50%;
 		bottom: 13px;
 		transform: translateX(-50%);
+
+		@media (max-width: 767px){
+			display: none;
+		}
 	}
 }
 
@@ -375,6 +508,11 @@ $color-blue : #00285c;
 			font-weight: normal;
 			font-family: 'HiraKakuStd W1';
 		}
+
+		@media (max-width: 767px){
+			font-size: 32px;
+		}
+
 		a{
 			background: #fff;
 			margin: 20px 0 80px;
@@ -416,10 +554,25 @@ $color-blue : #00285c;
 			width: 33.33%;
 			text-align: center;
 			padding: 0 15px;
+
+			@media (max-width: 767px){
+				width: 100%;
+				margin: 0 0 30px;
+			}
+
 			.phone-item{
 				display: inline-block;
 				border: 1px solid #EBEBEB;
+
+				@media (max-width: 767px){
+					width: 100%;
+				}
+
 				.img{
+					@media (max-width: 767px){
+						float: left;
+						width: 40%;
+					}
 					img{
 						max-width: 100%;
 						width: 100%;
@@ -428,6 +581,14 @@ $color-blue : #00285c;
 				.content{
 					margin: 40px 0 0;
 					padding: 0 17px;
+
+					@media (max-width: 767px){
+						width: 60%;
+						text-align: left;
+						float: right;
+						padding-left: 30px;
+					}
+
 					p{
 						font-size: 24px;
 						color: #07295c;
@@ -448,6 +609,9 @@ $color-blue : #00285c;
 						@media (min-width: 768px) and (max-width: 991px){
 							font-size: 10px;
 							min-height: 50px;
+						}
+						@media (max-width: 767px){
+							min-height: auto;
 						}
 					}
 					a{
@@ -498,6 +662,12 @@ $color-blue : #00285c;
 			width: 25%;
 			.product-item{
 				border: 1px solid #DDDDDD;
+				.img{
+					img{
+						width: 100%;
+						max-width: 100%;
+					}
+				}
 				.content{
 					text-align: center;
 					.name{
@@ -555,6 +725,10 @@ $color-blue : #00285c;
 				color: #003b87;
 				font-family: 'HelveticaNeueLTStd Lt';
 				margin: 8px 0;
+
+				@media (min-width: 768px) and (max-width: 991px){
+					font-size: 24px;
+				}
 			}
 			span{
 				display: block;
@@ -592,6 +766,12 @@ $color-blue : #00285c;
 			width: 25%;
 			padding: 0 15px;
 			margin: 0 0 30px;
+			a{
+				img{
+					width: 100%;
+					max-width: 100%;
+				}
+			}
 		}
 	}
 	a.btn-block{
@@ -606,6 +786,16 @@ $color-blue : #00285c;
 		.img{
 			padding:0;
 			background: #fff;
+			img{
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+		.content{
+			@media (min-width: 768px) and (max-width: 991px){
+				height: 135px;
+				padding: 21px 0;
+			}
 		}
 	}
 }
@@ -651,10 +841,19 @@ $color-blue : #00285c;
 					display: inline-block;
 					margin: 0 0 15px;
 					text-align: left;
+
+					@media (min-width: 768px) and (max-width: 991px){
+						font-size: 10px;
+						min-height: 42px;
+					}
 				}
 				.topic-group{
 					font-size: 14px;
 					text-transform: uppercase;
+
+					@media (min-width: 768px) and (max-width: 991px){
+						font-size: 10px;
+					}
 				}
 			}
 		}
@@ -687,10 +886,19 @@ $color-blue : #00285c;
 	.info-right{
 		width: 75%;
 		float: right;
+
+		@media (min-width: 768px) and (max-width: 991px){
+			padding: 0 0 0 30px;
+		}
 		li{
 			background: url(../images/df-icon-release-next.png) no-repeat right center;
 			font-family: 'HiraKakuStd W3';
 			margin: 0 0 10px;
+
+			@media (min-width: 768px) and (max-width: 991px){
+
+				font-size: 10px;
+			}
 			.date{
 				color: #999;
 				margin: 0 24px 0 0;
@@ -710,11 +918,21 @@ $color-blue : #00285c;
 	background: #fff;
 	z-index: 9999;
 	padding: 18px 30px;
+
+	@media (min-width: 768px) and (max-width: 991px){
+		font-size: 10px;
+		padding: 18px 10px;
+	}
 	.left{
 		float: left;
 		div{
 			display: inline-block;
 			margin: 0 20px 0 0;
+
+			@media (min-width: 768px) and (max-width: 991px){
+				margin: 0 10px 0 0;
+			}
+
 			&:last-child{
 				a{
 					border-radius: 5px;
@@ -726,6 +944,11 @@ $color-blue : #00285c;
 				padding: 0 22px;
 				border: 1px solid $color-blue;
 				border-radius: 0 5px 5px 0;
+
+				@media (min-width: 768px) and (max-width: 991px){
+					padding: 0 15px;
+				}
+
 				&.active{
 					background: $color-blue;
 					border-radius: 5px 0 0 5px;
@@ -746,6 +969,10 @@ $color-blue : #00285c;
 		display: flex;
 		a{
 			margin: 0 0 0 20px;
+
+			@media (min-width: 768px) and (max-width: 991px){
+				margin: 0 0 0 10px;
+			}
 		}
 	}
 }
