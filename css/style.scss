@@ -97,8 +97,23 @@ $color-blue : #00285c;
 		width: 40px;
 		height: auto;
 		line-height: 60px;
+
 	  	@media screen and (max-width: 767px) {
 		    display: block;
+		    &.active{
+		    	span{
+		    		background: #fff;
+		    		&:first-child{
+		    			transform: translateY(6px) rotateZ(-135deg);
+		    		}
+		    		&:nth-child(2){
+		    			display: none;
+		    		}
+		    		&:last-child{
+		    			transform: translateY(-6px) rotateZ(135deg);
+		    		}
+		    	}
+		    }
 		}
 		span{
 			display: block;
@@ -169,6 +184,9 @@ $color-blue : #00285c;
 				display: none;
 				width: 100%;
 				background: #fff;
+				&.active{
+					display: block;
+				}
 			}
 
 			li{
@@ -185,6 +203,7 @@ $color-blue : #00285c;
 				@media (max-width: 767px){
 					padding: 10px 0;
 					border-bottom: 3px solid #ccc;
+					width: 100%;
 				}
 
 				a{
@@ -209,6 +228,9 @@ $color-blue : #00285c;
 						display: block;
 						@media (min-width: 768px) and (max-width: 991px) {
 							font-size: 8px;
+						}
+						@media (max-width: 767px){
+							display: none;
 						}
 					}
 				}
@@ -507,10 +529,10 @@ $color-blue : #00285c;
 			color: $color-blue;
 			font-weight: normal;
 			font-family: 'HiraKakuStd W1';
-		}
 
-		@media (max-width: 767px){
-			font-size: 32px;
+			@media (max-width: 767px){
+				font-size: 32px;
+			}
 		}
 
 		a{
@@ -524,6 +546,10 @@ $color-blue : #00285c;
 			font-family: 'HiraKakuStd W3';
 			font-size: 16px;
 			color: #07295c;
+
+			@media (max-width: 767px){
+				font-size: 20px;
+			}
 		}
 	}
 	.btn-block{
@@ -538,10 +564,23 @@ $color-blue : #00285c;
 		text-align: center;
 		padding: 20px 0;
 		border-radius: 5px;
+
+		@media (max-width: 767px){
+			margin: 0 !important;
+			font-size: 16px;
+		}
+
 		img{
 			vertical-align: middle;
 			padding: 0 15px 0 0;
 			margin: -3px 0 0;
+
+			@media (max-width: 767px){
+				width: 25px;
+				height: 25px;
+				padding: 0;
+				margin-right: 10px;
+			}
 		}
 	}
 }
@@ -660,6 +699,11 @@ $color-blue : #00285c;
 			padding: 0 15px;
 			float: left;
 			width: 25%;
+
+			@media (max-width: 767px){
+				width: 33.33%;
+			}
+
 			.product-item{
 				border: 1px solid #DDDDDD;
 				.img{
@@ -675,10 +719,19 @@ $color-blue : #00285c;
 						color: #003b87;
 						font-family: 'HelveticaNeueLTStd Lt';
 						margin: 20px 0 10px;
+
+						@media (max-width: 767px){
+							font-size: 26px;
+						}
+
 						small{
 							font-size: 12px;
 							color: #003b87;
 							display: block;
+
+							@media (max-width: 767px){
+								font-size: 18px;
+							}
 						}
 					}
 					.pricing{
@@ -686,9 +739,18 @@ $color-blue : #00285c;
 						color: #000;
 						font-family: 'HiraKakuStd W3';
 						margin: 0 0 30px;
+
+						@media (max-width: 767px){
+							font-size: 20px;
+						}
+
 						small{
 							font-size: 10px;
 							display: block;
+
+							@media (max-width: 767px){
+								font-size: 14px;
+							}
 						}
 					}
 				}
@@ -706,6 +768,11 @@ $color-blue : #00285c;
 			text-align: center;
 			padding: 16px 0 5px;
 			max-height: 175px;
+
+			@media (max-width: 767px){
+				width: 100%;
+				padding: 19px 0 8px;
+			}
 		}
 		.content{
 			border: 1px solid #DDDDDD;
@@ -715,6 +782,13 @@ $color-blue : #00285c;
 			padding: 43px 0 37px;
 			text-align: center;
 			max-height: 175px;
+
+			@media (max-width: 767px){
+				width: 100%;
+				border-left: 1px solid #ddd;
+				border-top: 0;
+			}
+
 			.top{
 				font-size: 14px;
 				color: #003b87;
@@ -762,6 +836,9 @@ $color-blue : #00285c;
 	ul{
 		margin: 0 -15px;
 		li{
+			@media (max-width: 767px){
+				width: 33.3%;
+			}
 			float: left;
 			width: 25%;
 			padding: 0 15px;
@@ -789,12 +866,30 @@ $color-blue : #00285c;
 			img{
 				max-width: 100%;
 				width: 100%;
+				@media (max-width: 767px){
+					height: 175px;
+				}
 			}
 		}
 		.content{
 			@media (min-width: 768px) and (max-width: 991px){
 				height: 135px;
 				padding: 21px 0;
+			}
+			.top{
+				@media (max-width: 767px){
+					font-size: 20px;
+				}
+			}
+			.down{
+				@media (max-width: 767px){
+					font-size: 30px;
+				}
+			}
+			span{
+				@media (max-width: 767px){
+					font-size: 20px;
+				}
 			}
 		}
 	}
@@ -811,6 +906,10 @@ $color-blue : #00285c;
 	}
 	ul{
 		li{
+			@media (max-width: 767px){
+				width: 50%;
+			}
+
 			&.pink{
 				.topic-group{
 					color: #D85CA7;
@@ -873,14 +972,29 @@ $color-blue : #00285c;
 		float: left;
 		text-align: left;
 		width: 25%;
+
+		@media (max-width: 767px){
+			width: 100%;
+			text-align: center;
+			margin: 0 0 70px;
+		}
+
 		h2{
 			font-family: 'HelveticaNeueLTStd Lt';
 			font-size: 24px;
 			color: $color-blue;
 			margin: 0 0 10px;
+
+			@media (max-width: 767px){
+				font-size: 34px;
+			}
 		}
 		span{
 			color: $color-blue;
+
+			@media (max-width: 767px){
+				font-size: 20px;
+			}
 		}
 	}
 	.info-right{
@@ -889,6 +1003,9 @@ $color-blue : #00285c;
 
 		@media (min-width: 768px) and (max-width: 991px){
 			padding: 0 0 0 30px;
+		}
+		@media (max-width: 767px){
+			width: 100%;
 		}
 		li{
 			background: url(../images/df-icon-release-next.png) no-repeat right center;
@@ -923,11 +1040,21 @@ $color-blue : #00285c;
 		font-size: 10px;
 		padding: 18px 10px;
 	}
+	@media (max-width: 767px){
+		padding-left: 20px;
+	}
+
 	.left{
 		float: left;
+
 		div{
 			display: inline-block;
 			margin: 0 20px 0 0;
+			&:last-child{
+				a{
+					border:0;
+				}
+			}
 
 			@media (min-width: 768px) and (max-width: 991px){
 				margin: 0 10px 0 0;
@@ -967,6 +1094,11 @@ $color-blue : #00285c;
 		float: right;
 		align-items: center;
 		display: flex;
+
+		@media (max-width: 767px){
+			display: none;
+		}
+
 		a{
 			margin: 0 0 0 20px;
 
@@ -977,6 +1109,28 @@ $color-blue : #00285c;
 	}
 }
 
+#download{
+	display: none;
+	position: fixed;
+	bottom: -10px;
+	right: -10px;
+	z-index: 99999;
+	border-radius: 500px;
+	display: inline-block;
+	width: 140px;
+	height: 140px;
+	box-shadow: 0px 0px 6px 0px #ccc;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	a{
+		background: url(../images/df-icon-download.png) no-repeat top center;
+		padding: 50px 0 0;
+	}
+}
+
 #footer{
 	background: #031228;
 	padding: 0 0 85px;
@@ -984,11 +1138,21 @@ $color-blue : #00285c;
 		padding: 45px 0 80px;
 		display: inline-block;
 		width: 100%;
+		@media (max-width: 767px){
+			padding-bottom: 0;
+		}
 		.sitemap{
 			ul{
 				width: 25%;
 				float: left;
 				position: relative;
+
+				@media (max-width: 767px){
+					width: 100%;
+					text-align: center;
+					margin: 0 0 70px;
+				}
+
 				li{
 					font-family: 'HiraKakuStd W3';
 					margin: 0 0 10px;
@@ -1007,6 +1171,10 @@ $color-blue : #00285c;
 							border: 2px solid #fff;
 							border-radius: 10px;
 							transform: translateY(-50%);
+
+							@media (max-width: 767px){
+								display: none;
+							}
 						}
 					}
 				}
@@ -1022,6 +1190,10 @@ $color-blue : #00285c;
 					border: 1px solid #888;
 					width: 24px;
 					height: 24px;
+
+					@media (max-width: 767px){
+						display: none;
+					}
 				}
 			}
 		}
@@ -1031,12 +1203,30 @@ $color-blue : #00285c;
 		display: inline-block;
 		width: 100%;
 		padding: 17px 0;
+
+		@media (max-width: 767px){
+			border: 0;
+			padding-top: 0;
+		}
+
 		.left{
 			float: left;
+
+			@media (max-width: 767px){
+				text-align: center;
+				float: none;
+				width: 100%;
+			}
+
 			span{
 				color: #999;
 				font-family: 'HelveticaNeueLTStd Roman';
 				margin: 0 15px 0 0;
+
+				@media (max-width: 767px){
+					margin: 0 0 21px;
+					display: block;
+				}
 			}
 			ul{
 				display: inline-block;
@@ -1066,6 +1256,10 @@ $color-blue : #00285c;
 			font-family: 'HelveticaNeueLTStd Lt';
 			font-size: 12px;
 			color: #999;
+
+			@media (max-width: 767px){
+				display: none;
+			}
 		}
 	}
 }

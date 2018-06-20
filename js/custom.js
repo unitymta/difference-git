@@ -16,3 +16,9 @@ $('#banner ul').slick({
 		}
 	]
 });
+
+$('#btn-menu-mobile').click(function(){
+	$(this).toggleClass('active');
+	$('#header-container .container').toggleClass('active');
+	$('.main-menu').toggleClass('active');
+});
