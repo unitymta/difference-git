@@ -273,13 +273,27 @@
     font-size: 2rem; }
 .responsive_640 .section .title a {
   font-size: 1.5rem; }
-.responsive_640 #banner .banner-slide ul li a .new-release .info {
-  padding-left: 1rem; }
-  .responsive_640 #banner .banner-slide ul li a .new-release .info h3 {
-    font-size: 1rem;
-    font-size: 1.2rem; }
-  .responsive_640 #banner .banner-slide ul li a .new-release .info .content {
-    font-size: 1rem; }
+.responsive_640 #banner .banner-slide ul li {
+  height: auto;
+  background-size: 100% !important; }
+  .responsive_640 #banner .banner-slide ul li a {
+    height: auto;
+    min-height: 135px; }
+    .responsive_640 #banner .banner-slide ul li a .banner-info h2 {
+      line-height: 20px;
+      font-size: 1.2rem;
+      margin: 0 0 5px; }
+    .responsive_640 #banner .banner-slide ul li a .banner-info .btn-play img {
+      width: 5rem; }
+    .responsive_640 #banner .banner-slide ul li a .new-release .info {
+      padding-left: 1rem; }
+      .responsive_640 #banner .banner-slide ul li a .new-release .info h3 {
+        font-size: 1rem;
+        font-size: 1.2rem; }
+      .responsive_640 #banner .banner-slide ul li a .new-release .info .content {
+        font-size: 1rem; }
+.responsive_640 #banner .banner-slide ul.slick-dots {
+  bottom: 125px; }
 .responsive_640 .phone ul li .phone-item {
   position: relative; }
   .responsive_640 .phone ul li .phone-item .content {

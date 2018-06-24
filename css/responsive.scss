@@ -561,7 +561,23 @@
 		.banner-slide{
 			ul{
 				li{
+					height: auto;
+					background-size: 100% !important;
 					a{
+						height: auto;
+						min-height: 135px;
+						.banner-info{
+							h2{
+								line-height: 20px;
+								font-size: 1.2rem;
+								margin: 0 0 5px;
+							}
+							.btn-play{
+								img{
+									width: 5rem;
+								}
+							}
+						}
 						.new-release{
 							.info{
 								padding-left: 1rem;
@@ -577,6 +593,9 @@
 					}
 				} 
 			} 
+			ul.slick-dots{
+				bottom: 125px;
+			}
 		} 
 	} 
 
